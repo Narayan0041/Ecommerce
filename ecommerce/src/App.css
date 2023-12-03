@@ -1,0 +1,47 @@
+:root {
+  --gray-color: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.LoginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
+  width: 100%;
+}
+.InputSection{
+  margin-top: 2rem;
+}
+.InputSection input {
+
+  height: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.ButtonSection {
+  margin-top: 7rem;
+  margin-left: 10rem;
+}
+
+
+.VerificationContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.VerificationSection{
+  padding:4rem 2rem;
+  border-radius: .5rem;
+  border: 2px solid var(--gray-color);
+}
