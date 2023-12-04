@@ -5,6 +5,7 @@ import Verification from './Verification';
 
 
 function Login() {
+    const [Step, setStep] = useState(1)
     const [UserInputs, SetUserInputs] = useState('');
     const [GetUser, setGetUser] = useState(null);
     let UserInput = (event) => {
@@ -21,6 +22,7 @@ function Login() {
             })
             if (GetNumber) {
                 let GenrateOTP = Math.floor(Math.random() * 10000000).toString().slice(0, 6);
+                setStep(2)
                 localStorage.setItem("OTP", JSON.stringify(`${GenrateOTP}`))
                 alert(`Your Coolpoint OTP is : ${GenrateOTP}`)
             }
@@ -32,8 +34,8 @@ function Login() {
         }
     }
     return (
-        <>
-            <div className="LoginContainer">
+        <>{
+            Step == 2 ? (<Verification />) : (<div className="LoginContainer">
                 <div className="LoginHeaderContainer">
                     <h1>Login</h1>
                 </div>
@@ -45,7 +47,9 @@ function Login() {
                         <Button Text="Next" Click={Login} backgroundColor="orange" color="White" fontSize="1rem" padding="1rem 2rem " borderRadius=".5rem" />
                     </div>
                 </div>
-            </div>
+            </div>)
+        }
+
         </>
     );
 }

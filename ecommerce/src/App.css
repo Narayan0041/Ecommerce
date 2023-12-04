@@ -16,9 +16,11 @@
   margin-top: 8rem;
   width: 100%;
 }
-.InputSection{
+
+.InputSection {
   margin-top: 2rem;
 }
+
 .InputSection input {
 
   height: 2rem;
@@ -33,15 +35,68 @@
 }
 
 
-.VerificationContainer{
+.VerificationContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
 }
-.VerificationSection{
-  padding:4rem 2rem;
+
+.VerificationSection {
+  padding: 4rem 2rem;
   border-radius: .5rem;
   border: 2px solid var(--gray-color);
+}
+
+/* ----------------------------------------------------------ProductContainer----------------------------------------------- */
+.ProductContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ProductSection {
+  display: flex;
+  margin-top: 2rem;
+  border: 1px solid gray;
+  border-bottom-left-radius: .8rem;
+  border-top-left-radius: .8rem;
+  width: 60%;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.ProductImageSection {
+  padding: 2rem 3.5rem;
+  align-items: center;
+  width: 40%;
+  border-bottom-left-radius: .8rem;
+  border-top-left-radius: .8rem;
+  background-color: rgb(240, 238, 238);
+}
+
+.ProductInfo {
+  padding: 1rem 4rem;
+}
+
+.ProductInfo a {
+  text-decoration: none;
+  list-style: none;
+  color: rgb(11, 11, 11);
+  font-size: 1.5rem;
+}
+
+.ProductInfo h3 {
+  margin-top: .5rem;
+}
+
+.ProductInfo h4 {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.ProductInfo p {
+  margin-top: .8rem;
 }

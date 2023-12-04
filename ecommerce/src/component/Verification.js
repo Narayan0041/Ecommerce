@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Input from '../common/Input'
-import Button from '../common/Button'
+import Button from '../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Verification(props) {
     const [Otp ,setOtp] =useState(null);
@@ -12,10 +13,15 @@ export default function Verification(props) {
     let UserInput=(event)=>{
      setUserInputs(event.target.value)
     }
+    
+    const navigate =useNavigate();
+
     let VerificationUser =()=>{
       if(UserInputs ===Otp){
         alert("match Otp")
+        navigate("/productList")
         setUserInputs('')
+        
         localStorage.removeItem("OTP")
       }
        else{
